@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE4F9273214AC760003A4C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9272214AC760003A4C6A /* AppDelegate.swift */; };
+		EE4F9275214AC760003A4C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9274214AC760003A4C6A /* ViewController.swift */; };
+		EE4F9278214AC760003A4C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F9276214AC760003A4C6A /* Main.storyboard */; };
+		EE4F927A214AC762003A4C6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4F9279214AC762003A4C6A /* Assets.xcassets */; };
+		EE4F927D214AC762003A4C6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F927B214AC762003A4C6A /* LaunchScreen.storyboard */; };
+		EE4F9288214AC762003A4C6A /* CasaDigitalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9287214AC762003A4C6A /* CasaDigitalTests.swift */; };
+		EE4F9293214AC762003A4C6A /* CasaDigitalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9292214AC762003A4C6A /* CasaDigitalUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE4F9284214AC762003A4C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE4F9267214AC760003A4C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4F926E214AC760003A4C6A;
+			remoteInfo = CasaDigital;
+		};
+		EE4F928F214AC762003A4C6A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE4F9267214AC760003A4C6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE4F926E214AC760003A4C6A;
+			remoteInfo = CasaDigital;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE4F926F214AC760003A4C6A /* CasaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4F9272214AC760003A4C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE4F9274214AC760003A4C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE4F9277214AC760003A4C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE4F9279214AC762003A4C6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE4F927C214AC762003A4C6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE4F927E214AC762003A4C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4F9283214AC762003A4C6A /* CasaDigitalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasaDigitalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4F9287214AC762003A4C6A /* CasaDigitalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasaDigitalTests.swift; sourceTree = "<group>"; };
+		EE4F9289214AC762003A4C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4F928E214AC762003A4C6A /* CasaDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasaDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4F9292214AC762003A4C6A /* CasaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasaDigitalUITests.swift; sourceTree = "<group>"; };
+		EE4F9294214AC762003A4C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE4F926C214AC760003A4C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F9280214AC762003A4C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F928B214AC762003A4C6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE4F9266214AC760003A4C6A = {
+			isa = PBXGroup;
+			children = (
+				EE4F9271214AC760003A4C6A /* CasaDigital */,
+				EE4F9286214AC762003A4C6A /* CasaDigitalTests */,
+				EE4F9291214AC762003A4C6A /* CasaDigitalUITests */,
+				EE4F9270214AC760003A4C6A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE4F9270214AC760003A4C6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F926F214AC760003A4C6A /* CasaDigital.app */,
+				EE4F9283214AC762003A4C6A /* CasaDigitalTests.xctest */,
+				EE4F928E214AC762003A4C6A /* CasaDigitalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE4F9271214AC760003A4C6A /* CasaDigital */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F9272214AC760003A4C6A /* AppDelegate.swift */,
+				EE4F9274214AC760003A4C6A /* ViewController.swift */,
+				EE4F9276214AC760003A4C6A /* Main.storyboard */,
+				EE4F9279214AC762003A4C6A /* Assets.xcassets */,
+				EE4F927B214AC762003A4C6A /* LaunchScreen.storyboard */,
+				EE4F927E214AC762003A4C6A /* Info.plist */,
+			);
+			path = CasaDigital;
+			sourceTree = "<group>";
+		};
+		EE4F9286214AC762003A4C6A /* CasaDigitalTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F9287214AC762003A4C6A /* CasaDigitalTests.swift */,
+				EE4F9289214AC762003A4C6A /* Info.plist */,
+			);
+			path = CasaDigitalTests;
+			sourceTree = "<group>";
+		};
+		EE4F9291214AC762003A4C6A /* CasaDigitalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4F9292214AC762003A4C6A /* CasaDigitalUITests.swift */,
+				EE4F9294214AC762003A4C6A /* Info.plist */,
+			);
+			path = CasaDigitalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE4F926E214AC760003A4C6A /* CasaDigital */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4F9297214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigital" */;
+			buildPhases = (
+				EE4F926B214AC760003A4C6A /* Sources */,
+				EE4F926C214AC760003A4C6A /* Frameworks */,
+				EE4F926D214AC760003A4C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CasaDigital;
+			productName = CasaDigital;
+			productReference = EE4F926F214AC760003A4C6A /* CasaDigital.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE4F9282214AC762003A4C6A /* CasaDigitalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4F929A214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalTests" */;
+			buildPhases = (
+				EE4F927F214AC762003A4C6A /* Sources */,
+				EE4F9280214AC762003A4C6A /* Frameworks */,
+				EE4F9281214AC762003A4C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4F9285214AC762003A4C6A /* PBXTargetDependency */,
+			);
+			name = CasaDigitalTests;
+			productName = CasaDigitalTests;
+			productReference = EE4F9283214AC762003A4C6A /* CasaDigitalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE4F928D214AC762003A4C6A /* CasaDigitalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4F929D214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalUITests" */;
+			buildPhases = (
+				EE4F928A214AC762003A4C6A /* Sources */,
+				EE4F928B214AC762003A4C6A /* Frameworks */,
+				EE4F928C214AC762003A4C6A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4F9290214AC762003A4C6A /* PBXTargetDependency */,
+			);
+			name = CasaDigitalUITests;
+			productName = CasaDigitalUITests;
+			productReference = EE4F928E214AC762003A4C6A /* CasaDigitalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE4F9267214AC760003A4C6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Italus Rodrigues do Prado";
+				TargetAttributes = {
+					EE4F926E214AC760003A4C6A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					EE4F9282214AC762003A4C6A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EE4F926E214AC760003A4C6A;
+					};
+					EE4F928D214AC762003A4C6A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EE4F926E214AC760003A4C6A;
+					};
+				};
+			};
+			buildConfigurationList = EE4F926A214AC760003A4C6A /* Build configuration list for PBXProject "CasaDigital" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE4F9266214AC760003A4C6A;
+			productRefGroup = EE4F9270214AC760003A4C6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE4F926E214AC760003A4C6A /* CasaDigital */,
+				EE4F9282214AC762003A4C6A /* CasaDigitalTests */,
+				EE4F928D214AC762003A4C6A /* CasaDigitalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE4F926D214AC760003A4C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F927D214AC762003A4C6A /* LaunchScreen.storyboard in Resources */,
+				EE4F927A214AC762003A4C6A /* Assets.xcassets in Resources */,
+				EE4F9278214AC760003A4C6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F9281214AC762003A4C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F928C214AC762003A4C6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE4F926B214AC760003A4C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F9275214AC760003A4C6A /* ViewController.swift in Sources */,
+				EE4F9273214AC760003A4C6A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F927F214AC762003A4C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F9288214AC762003A4C6A /* CasaDigitalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4F928A214AC762003A4C6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4F9293214AC762003A4C6A /* CasaDigitalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE4F9285214AC762003A4C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE4F926E214AC760003A4C6A /* CasaDigital */;
+			targetProxy = EE4F9284214AC762003A4C6A /* PBXContainerItemProxy */;
+		};
+		EE4F9290214AC762003A4C6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE4F926E214AC760003A4C6A /* CasaDigital */;
+			targetProxy = EE4F928F214AC762003A4C6A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE4F9276214AC760003A4C6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4F9277214AC760003A4C6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE4F927B214AC762003A4C6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE4F927C214AC762003A4C6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE4F9295214AC762003A4C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE4F9296214AC762003A4C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE4F9298214AC762003A4C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigital/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigital;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE4F9299214AC762003A4C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigital/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigital;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE4F929B214AC762003A4C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigitalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CasaDigital.app/CasaDigital";
+			};
+			name = Debug;
+		};
+		EE4F929C214AC762003A4C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigitalTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CasaDigital.app/CasaDigital";
+			};
+			name = Release;
+		};
+		EE4F929E214AC762003A4C6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigitalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CasaDigital;
+			};
+			name = Debug;
+		};
+		EE4F929F214AC762003A4C6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N8JBYBWDT9;
+				INFOPLIST_FILE = CasaDigitalUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CasaDigital;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE4F926A214AC760003A4C6A /* Build configuration list for PBXProject "CasaDigital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F9295214AC762003A4C6A /* Debug */,
+				EE4F9296214AC762003A4C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4F9297214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigital" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F9298214AC762003A4C6A /* Debug */,
+				EE4F9299214AC762003A4C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4F929A214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F929B214AC762003A4C6A /* Debug */,
+				EE4F929C214AC762003A4C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4F929D214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4F929E214AC762003A4C6A /* Debug */,
+				EE4F929F214AC762003A4C6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE4F9267214AC760003A4C6A /* Project object */;
+}
