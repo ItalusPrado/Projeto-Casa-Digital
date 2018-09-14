@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     }
     
     func connectMqtt(){
-        DispatchQueue.async(<#T##DispatchQueue#>)
+        //DispatchQueue.async(<#T##DispatchQueue#>)
         self.mqttSession = MQTTSession(
             host: "ifce.sanusb.org",
             port: 1883,
