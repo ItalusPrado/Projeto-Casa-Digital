@@ -1,0 +1,16 @@
+PODS:
+  - SwiftMQTT (2.0.0)
+
+DEPENDENCIES:
+  - SwiftMQTT
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftMQTT
+
+SPEC CHECKSUMS:
+  SwiftMQTT: 1223cdf3056cd9211112e3f136aa221125b457e1
+
+PODFILE CHECKSUM: c222a833ca5becf3d8ce49647c1e4b9bf0a57e39
+
+COCOAPODS: 1.5.3

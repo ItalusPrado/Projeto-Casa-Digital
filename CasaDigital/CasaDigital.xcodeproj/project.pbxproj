@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153EC2F3E7FD787F35361574 /* Pods_CasaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C730C0B002A3A99D2C06CB5E /* Pods_CasaDigitalUITests.framework */; };
+		4BE7D2756AA49ED052ADD145 /* Pods_CasaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0F2D4CA10407579A95E04 /* Pods_CasaDigital.framework */; };
+		676CDBEBA8CDDC808A074D6F /* Pods_CasaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB43C220F5D6D1BF3D6785C4 /* Pods_CasaDigitalTests.framework */; };
 		EE4F9273214AC760003A4C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9272214AC760003A4C6A /* AppDelegate.swift */; };
 		EE4F9275214AC760003A4C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9274214AC760003A4C6A /* ViewController.swift */; };
 		EE4F9278214AC760003A4C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F9276214AC760003A4C6A /* Main.storyboard */; };
@@ -34,6 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E0F2D4CA10407579A95E04 /* Pods_CasaDigital.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasaDigital.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6844BBFF8DCF2A322F2565C6 /* Pods-CasaDigital.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigital.release.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigital/Pods-CasaDigital.release.xcconfig"; sourceTree = "<group>"; };
+		6C3529F52C351FABDEA5B1D3 /* Pods-CasaDigital.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigital.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigital/Pods-CasaDigital.debug.xcconfig"; sourceTree = "<group>"; };
+		771872C98DD50C402440120F /* Pods-CasaDigitalTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigitalTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigitalTests/Pods-CasaDigitalTests.release.xcconfig"; sourceTree = "<group>"; };
+		818F3015F87C0293A8B8F013 /* Pods-CasaDigitalUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigitalUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigitalUITests/Pods-CasaDigitalUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92F43A0562088E28A90B3AB9 /* Pods-CasaDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigitalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigitalTests/Pods-CasaDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB43C220F5D6D1BF3D6785C4 /* Pods_CasaDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasaDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C730C0B002A3A99D2C06CB5E /* Pods_CasaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4F926F214AC760003A4C6A /* CasaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4F9272214AC760003A4C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE4F9274214AC760003A4C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +58,7 @@
 		EE4F928E214AC762003A4C6A /* CasaDigitalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasaDigitalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4F9292214AC762003A4C6A /* CasaDigitalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasaDigitalUITests.swift; sourceTree = "<group>"; };
 		EE4F9294214AC762003A4C6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD8E93E69F1526A19973F234 /* Pods-CasaDigitalUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigitalUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigitalUITests/Pods-CasaDigitalUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE7D2756AA49ED052ADD145 /* Pods_CasaDigital.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				676CDBEBA8CDDC808A074D6F /* Pods_CasaDigitalTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				153EC2F3E7FD787F35361574 /* Pods_CasaDigitalUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C29C6BEF43E74CBD19EFA9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30E0F2D4CA10407579A95E04 /* Pods_CasaDigital.framework */,
+				AB43C220F5D6D1BF3D6785C4 /* Pods_CasaDigitalTests.framework */,
+				C730C0B002A3A99D2C06CB5E /* Pods_CasaDigitalUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3AD33CD352063D218B66C51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C3529F52C351FABDEA5B1D3 /* Pods-CasaDigital.debug.xcconfig */,
+				6844BBFF8DCF2A322F2565C6 /* Pods-CasaDigital.release.xcconfig */,
+				92F43A0562088E28A90B3AB9 /* Pods-CasaDigitalTests.debug.xcconfig */,
+				771872C98DD50C402440120F /* Pods-CasaDigitalTests.release.xcconfig */,
+				FD8E93E69F1526A19973F234 /* Pods-CasaDigitalUITests.debug.xcconfig */,
+				818F3015F87C0293A8B8F013 /* Pods-CasaDigitalUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EE4F9266214AC760003A4C6A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				EE4F9286214AC762003A4C6A /* CasaDigitalTests */,
 				EE4F9291214AC762003A4C6A /* CasaDigitalUITests */,
 				EE4F9270214AC760003A4C6A /* Products */,
+				E3AD33CD352063D218B66C51 /* Pods */,
+				7C29C6BEF43E74CBD19EFA9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE4F9297214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigital" */;
 			buildPhases = (
+				23605B3B605617104A411972 /* [CP] Check Pods Manifest.lock */,
 				EE4F926B214AC760003A4C6A /* Sources */,
 				EE4F926C214AC760003A4C6A /* Frameworks */,
 				EE4F926D214AC760003A4C6A /* Resources */,
+				F2791D1CB5FA1FC21CA1E1EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE4F929A214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalTests" */;
 			buildPhases = (
+				7F07DFE8E13235ACB450B40D /* [CP] Check Pods Manifest.lock */,
 				EE4F927F214AC762003A4C6A /* Sources */,
 				EE4F9280214AC762003A4C6A /* Frameworks */,
 				EE4F9281214AC762003A4C6A /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE4F929D214AC762003A4C6A /* Build configuration list for PBXNativeTarget "CasaDigitalUITests" */;
 			buildPhases = (
+				4C6C40DCAA835D25E0B7C182 /* [CP] Check Pods Manifest.lock */,
 				EE4F928A214AC762003A4C6A /* Sources */,
 				EE4F928B214AC762003A4C6A /* Frameworks */,
 				EE4F928C214AC762003A4C6A /* Resources */,
@@ -250,6 +294,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23605B3B605617104A411972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CasaDigital-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C6C40DCAA835D25E0B7C182 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CasaDigitalUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F07DFE8E13235ACB450B40D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CasaDigitalTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2791D1CB5FA1FC21CA1E1EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CasaDigital/Pods-CasaDigital-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftMQTT/SwiftMQTT.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMQTT.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CasaDigital/Pods-CasaDigital-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE4F926B214AC760003A4C6A /* Sources */ = {
@@ -428,15 +547,13 @@
 		};
 		EE4F9298214AC762003A4C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C3529F52C351FABDEA5B1D3 /* Pods-CasaDigital.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +563,13 @@
 		};
 		EE4F9299214AC762003A4C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6844BBFF8DCF2A322F2565C6 /* Pods-CasaDigital.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigital/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -464,17 +579,14 @@
 		};
 		EE4F929B214AC762003A4C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F43A0562088E28A90B3AB9 /* Pods-CasaDigitalTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -485,17 +597,14 @@
 		};
 		EE4F929C214AC762003A4C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 771872C98DD50C402440120F /* Pods-CasaDigitalTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigitalTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -506,16 +615,13 @@
 		};
 		EE4F929E214AC762003A4C6A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD8E93E69F1526A19973F234 /* Pods-CasaDigitalUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -526,16 +632,13 @@
 		};
 		EE4F929F214AC762003A4C6A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818F3015F87C0293A8B8F013 /* Pods-CasaDigitalUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8JBYBWDT9;
 				INFOPLIST_FILE = CasaDigitalUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = italus.CasaDigitalUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
