@@ -115,20 +115,20 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length)
     //verifica se deve colocar nivel alto de tensão na saída D0:
     //IMPORTANTE: o Led já contido na placa é acionado com lógica invertida (ou seja,
     //enviar HIGH para o output faz o Led apagar / enviar LOW faz o Led acender)
-    switch(msg){
-      case "Ativar Led":
-        digitalWrite(D4,HIGH);
-      case "Ativar TV":
-        digitalWrite(D2,HIGH);
-      case "Ativar Ar":
-      case "Ativar Lampada":
-      case "Desativar Led":
-        digitalWrite(D4,LOW);
-      case "Desativar TV":
-        digitalWrite(D2,HIGH);
-      case "Desativar Ar":
-      case "Desativar Lampada":
-    }
+//    switch(msg){
+//      case "Ativar Led":
+//        digitalWrite(D4,HIGH);
+//      case "Ativar TV":
+//        digitalWrite(D2,HIGH);
+//      case "Ativar Ar":
+//      case "Ativar Lampada":
+//      case "Desativar Led":
+//        digitalWrite(D4,LOW);
+//      case "Desativar TV":
+//        digitalWrite(D2,HIGH);
+//      case "Desativar Ar":
+//      case "Desativar Lampada":
+//    }
     if (msg.equals("Ligar"))
     {
         digitalWrite(D0, LOW);
@@ -233,7 +233,7 @@ void InitOutput(void)
     //enviar HIGH para o output faz o Led apagar / enviar LOW faz o Led acender)
     pinMode(D2, OUTPUT);
     pinMode(D1, OUTPUT);
-    pinMode(D4, OUTPUT)
+    pinMode(D4, OUTPUT);
     //pinMode(D0, OUTPUT);
     //digitalWrite(D0, HIGH);          
 }

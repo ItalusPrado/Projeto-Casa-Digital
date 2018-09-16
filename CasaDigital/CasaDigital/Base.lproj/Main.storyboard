@@ -20,15 +20,27 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ge-KJ-1o8">
                                 <rect key="frame" x="20" y="139" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="NZ7-qK-BhH"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-kY-WdK">
                                 <rect key="frame" x="20" y="190" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kpa-15-qPW"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAK-vH-PWp">
                                 <rect key="frame" x="20" y="292" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Lp-Kj-NRH"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fl7-2P-MjW">
                                 <rect key="frame" x="20" y="241" width="51" height="31"/>
+                                <connections>
+                                    <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="5C7-Bg-NF7"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conectando..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSI-51-XCu">
                                 <rect key="frame" x="93.5" y="40" width="133.5" height="24"/>
