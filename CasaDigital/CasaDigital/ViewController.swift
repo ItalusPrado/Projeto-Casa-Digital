@@ -1,8 +1,11 @@
 import UIKit
+import MapKit
 import SwiftMQTT
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBOutlet weak var ledSwitch: UISwitch!
@@ -11,10 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var lampSwitch: UISwitch!
     
     var mqttSession: MQTTSession?
+    var locationManager = CLLocationManager()
     //let locationManager = LocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.delegate = self
         
     }
     
@@ -83,5 +88,18 @@ class ViewController: UIViewController {
         
     }
     
+}
+
+extension ViewController: CLLocationManagerDelegate{
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways || status == .authorizedWhenInUse{
+            manager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations.first)
+    }
 }
 
