@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var distanceLabel: UILabel!
     
     @IBOutlet weak var ledSwitch: UISwitch!
     @IBOutlet weak var tvSwitch: UISwitch!
@@ -15,16 +16,29 @@ class ViewController: UIViewController {
     
     var mqttSession: MQTTSession?
     var locationManager = CLLocationManager()
-    //let locationManager = LocationManager()
+    var distance = 500
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.distanceLabel.text = "Distância: \(self.distance)"
         locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         connectMqtt()
+    }
+    
+    @IBAction func setLocation(_ sender: Any) {
+        if let location = locationManager.location{
+            locationManager.startMonitoring(for: CLCircularRegion(center: location.coordinate, radius: CLLocationDistance(self.distance), identifier: "centro"))
+        }
+    }
+    
+    @IBAction func changeDistance(_ sender: UISlider) {
+        self.distance = Int(sender.value*1000)
+        self.distanceLabel.text = "Distância: \(self.distance)"
     }
     
     @IBAction func activateDispositive(_ sender: UISwitch) {
@@ -59,7 +73,6 @@ class ViewController: UIViewController {
     }
     
     func connectMqtt(){
-        //DispatchQueue.async(<#T##DispatchQueue#>)
         self.mqttSession = MQTTSession(
             host: "ifce.sanusb.org",
             port: 1883,
@@ -95,11 +108,24 @@ extension ViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways || status == .authorizedWhenInUse{
             manager.startUpdatingLocation()
+            self.mapView.showsUserLocation = true
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations.first)
+        if let location = locations.first{
+            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
+            self.mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Saiu")
+    }
+ 
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Entrou")
     }
 }
 

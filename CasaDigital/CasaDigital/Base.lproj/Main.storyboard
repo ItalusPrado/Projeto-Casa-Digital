@@ -73,29 +73,60 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OCF-b2-J8z">
-                                <rect key="frame" x="16" y="308" width="288" height="240"/>
+                                <rect key="frame" x="16" y="308" width="288" height="171"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ssh-Qu-DRI">
+                                <rect key="frame" x="94" y="522" width="133" height="30"/>
+                                <state key="normal" title="Marcar Localização"/>
+                                <connections>
+                                    <action selector="setLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="45M-se-9sg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distância (Metros):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEv-6i-AC2">
+                                <rect key="frame" x="16" y="495" width="146" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="fBK-iM-qfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-oq-icX">
+                                <rect key="frame" x="168" y="490.5" width="138" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="7xu-ky-ibY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeDistance:" destination="BYZ-38-t0r" eventType="valueChanged" id="3fK-14-dth"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fl7-2P-MjW" firstAttribute="centerX" secondItem="DXr-kY-WdK" secondAttribute="centerX" id="1mY-DL-paG"/>
                             <constraint firstItem="K4G-QL-3Jw" firstAttribute="centerY" secondItem="DXr-kY-WdK" secondAttribute="centerY" id="2jF-F9-If5"/>
                             <constraint firstItem="2Ux-Na-nnH" firstAttribute="centerY" secondItem="jAK-vH-PWp" secondAttribute="centerY" id="3Hu-G4-ZCF"/>
+                            <constraint firstItem="VEv-6i-AC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="8bu-bs-ORS"/>
                             <constraint firstItem="fl7-2P-MjW" firstAttribute="top" secondItem="DXr-kY-WdK" secondAttribute="bottom" constant="20" id="9Gz-MB-DPJ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OCF-b2-J8z" secondAttribute="bottom" constant="20" id="Cme-Dv-gb1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OCF-b2-J8z" secondAttribute="trailing" constant="16" id="HZD-Ol-vZK"/>
+                            <constraint firstItem="VEv-6i-AC2" firstAttribute="top" secondItem="OCF-b2-J8z" secondAttribute="bottom" constant="16" id="I8M-kP-HL2"/>
                             <constraint firstItem="jAK-vH-PWp" firstAttribute="top" secondItem="fl7-2P-MjW" secondAttribute="bottom" constant="20" id="JNt-Vh-EoO"/>
                             <constraint firstItem="DXr-kY-WdK" firstAttribute="centerX" secondItem="8ge-KJ-1o8" secondAttribute="centerX" id="N1K-pW-gFr"/>
                             <constraint firstItem="DXr-kY-WdK" firstAttribute="top" secondItem="8ge-KJ-1o8" secondAttribute="bottom" constant="20" id="R9A-rC-VRC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ssh-Qu-DRI" secondAttribute="bottom" constant="16" id="Tw5-bk-m5f"/>
                             <constraint firstItem="WSI-51-XCu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UM2-dN-188"/>
+                            <constraint firstItem="Ssh-Qu-DRI" firstAttribute="top" secondItem="VEv-6i-AC2" secondAttribute="bottom" constant="6" id="XyN-EW-Yio"/>
                             <constraint firstItem="2Ux-Na-nnH" firstAttribute="leading" secondItem="jAK-vH-PWp" secondAttribute="trailing" constant="20" id="ZyD-Gf-FfE"/>
                             <constraint firstItem="8ge-KJ-1o8" firstAttribute="top" secondItem="WSI-51-XCu" secondAttribute="bottom" constant="40" id="a1J-fh-PCr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ed2-oq-icX" secondAttribute="trailing" constant="16" id="aKf-Tm-xKo"/>
                             <constraint firstItem="bFO-yn-AJ4" firstAttribute="leading" secondItem="fl7-2P-MjW" secondAttribute="trailing" constant="20" id="c4Z-CS-ygN"/>
                             <constraint firstItem="bIt-rG-KLU" firstAttribute="leading" secondItem="8ge-KJ-1o8" secondAttribute="trailing" constant="20" id="fFi-3v-0vA"/>
                             <constraint firstItem="8ge-KJ-1o8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gIb-54-iGO"/>
                             <constraint firstItem="bFO-yn-AJ4" firstAttribute="centerY" secondItem="fl7-2P-MjW" secondAttribute="centerY" id="ivL-0w-OjU"/>
                             <constraint firstItem="OCF-b2-J8z" firstAttribute="top" secondItem="jAK-vH-PWp" secondAttribute="bottom" constant="20" id="jbn-c7-f1M"/>
+                            <constraint firstItem="ed2-oq-icX" firstAttribute="centerY" secondItem="VEv-6i-AC2" secondAttribute="centerY" id="kFz-Ao-2F5"/>
                             <constraint firstItem="OCF-b2-J8z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kie-MY-LNO"/>
+                            <constraint firstItem="Ssh-Qu-DRI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nzr-XP-s24"/>
                             <constraint firstItem="bIt-rG-KLU" firstAttribute="centerY" secondItem="8ge-KJ-1o8" secondAttribute="centerY" id="ol8-QZ-lrR"/>
                             <constraint firstItem="K4G-QL-3Jw" firstAttribute="leading" secondItem="DXr-kY-WdK" secondAttribute="trailing" constant="20" id="uDZ-Mg-ejf"/>
                             <constraint firstItem="jAK-vH-PWp" firstAttribute="centerX" secondItem="fl7-2P-MjW" secondAttribute="centerX" id="v7H-aZ-aUj"/>
@@ -105,6 +136,7 @@
                     </view>
                     <connections>
                         <outlet property="arSwitch" destination="fl7-2P-MjW" id="eec-dx-eKc"/>
+                        <outlet property="distanceLabel" destination="VEv-6i-AC2" id="LH6-GO-274"/>
                         <outlet property="lampSwitch" destination="jAK-vH-PWp" id="vD8-Wx-si9"/>
                         <outlet property="ledSwitch" destination="8ge-KJ-1o8" id="2Gx-YT-Adh"/>
                         <outlet property="mapView" destination="OCF-b2-J8z" id="7hK-VP-nQc"/>
