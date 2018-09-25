@@ -10,6 +10,8 @@
 		153EC2F3E7FD787F35361574 /* Pods_CasaDigitalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C730C0B002A3A99D2C06CB5E /* Pods_CasaDigitalUITests.framework */; };
 		4BE7D2756AA49ED052ADD145 /* Pods_CasaDigital.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E0F2D4CA10407579A95E04 /* Pods_CasaDigital.framework */; };
 		676CDBEBA8CDDC808A074D6F /* Pods_CasaDigitalTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB43C220F5D6D1BF3D6785C4 /* Pods_CasaDigitalTests.framework */; };
+		EE07FD9D2155246B004C358C /* LoadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07FD9C2155246B004C358C /* LoadingAnimation.swift */; };
+		EE07FDA12156CA71004C358C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07FDA02156CA71004C358C /* Alert.swift */; };
 		EE4F9273214AC760003A4C6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9272214AC760003A4C6A /* AppDelegate.swift */; };
 		EE4F9275214AC760003A4C6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4F9274214AC760003A4C6A /* ViewController.swift */; };
 		EE4F9278214AC760003A4C6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4F9276214AC760003A4C6A /* Main.storyboard */; };
@@ -45,6 +47,8 @@
 		92F43A0562088E28A90B3AB9 /* Pods-CasaDigitalTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CasaDigitalTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CasaDigitalTests/Pods-CasaDigitalTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB43C220F5D6D1BF3D6785C4 /* Pods_CasaDigitalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasaDigitalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C730C0B002A3A99D2C06CB5E /* Pods_CasaDigitalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CasaDigitalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE07FD9C2155246B004C358C /* LoadingAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAnimation.swift; sourceTree = "<group>"; };
+		EE07FDA02156CA71004C358C /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		EE4F926F214AC760003A4C6A /* CasaDigital.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasaDigital.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4F9272214AC760003A4C6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE4F9274214AC760003A4C6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,8 @@
 				EE4F9279214AC762003A4C6A /* Assets.xcassets */,
 				EE4F927B214AC762003A4C6A /* LaunchScreen.storyboard */,
 				EE4F927E214AC762003A4C6A /* Info.plist */,
+				EE07FD9C2155246B004C358C /* LoadingAnimation.swift */,
+				EE07FDA02156CA71004C358C /* Alert.swift */,
 			);
 			path = CasaDigital;
 			sourceTree = "<group>";
@@ -380,7 +386,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE07FD9D2155246B004C358C /* LoadingAnimation.swift in Sources */,
 				EE4F9275214AC760003A4C6A /* ViewController.swift in Sources */,
+				EE07FDA12156CA71004C358C /* Alert.swift in Sources */,
 				EE4F9273214AC760003A4C6A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

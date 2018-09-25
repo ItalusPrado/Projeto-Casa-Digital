@@ -2,8 +2,11 @@ import UIKit
 import MapKit
 import SwiftMQTT
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MKMapViewDelegate {
     
+    @IBOutlet weak var geoStopBtn: UIButton!
+    
+    @IBOutlet weak var reconnectBtn: UIButton!
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var statusLabel: UILabel!
@@ -15,14 +18,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var lampSwitch: UISwitch!
     
     var mqttSession: MQTTSession?
+    var centerLocation: CLLocation?
     var locationManager = CLLocationManager()
-    var distance = 500
+    var distance: Double = 500
+    var centered = false
+    var inside: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.distanceLabel.text = "Distância: \(self.distance)"
         locationManager.delegate = self
+        mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
         
     }
     
@@ -32,12 +40,55 @@ class ViewController: UIViewController {
     
     @IBAction func setLocation(_ sender: Any) {
         if let location = locationManager.location{
-            locationManager.startMonitoring(for: CLCircularRegion(center: location.coordinate, radius: CLLocationDistance(self.distance), identifier: "centro"))
+            self.centerLocation = location
+            let circle = MKCircle(center: location.coordinate, radius: CLLocationDistance(self.distance))
+            self.inside = true
+            mapView.add(circle)
+        }
+    }
+    
+    @IBAction func activateLocalization(_ sender: Any) {
+        if locationManager.location != nil{
+            self.geoStopBtn.titleLabel?.text = "Ativar Localização"
+            self.geoStopBtn.backgroundColor = .blue
+            locationManager.stopUpdatingLocation()
+        } else {
+            self.geoStopBtn.titleLabel?.text = "Parar Localização"
+            self.geoStopBtn.backgroundColor = .red
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circelOverLay = overlay as? MKCircle else {return MKOverlayRenderer()}
+        
+        let circleRenderer = MKCircleRenderer(circle: circelOverLay)
+        circleRenderer.strokeColor = .red
+        circleRenderer.fillColor = .red
+        return circleRenderer
+    }
+    
+    @IBAction func tryReconnect(_ sender: Any) {
+        LoadingAnimation.run()
+        DispatchQueue.main.async {
+            self.mqttSession!.connect { (result, error) in
+                if result == false {
+                    self.statusLabel.text = "Desconectado"
+                    self.statusLabel.textColor = .red
+                    self.reconnectBtn.isHidden = false
+                } else {
+                    self.statusLabel.text = "Conectado"
+                    self.statusLabel.textColor = .black
+                    self.reconnectBtn.isHidden = true
+                }
+                LoadingAnimation.stop()
+            }
         }
     }
     
     @IBAction func changeDistance(_ sender: UISlider) {
-        self.distance = Int(sender.value*1000)
+        self.distance = Double(sender.value*1000)
         self.distanceLabel.text = "Distância: \(self.distance)"
     }
     
@@ -76,20 +127,33 @@ class ViewController: UIViewController {
         self.mqttSession = MQTTSession(
             host: "ifce.sanusb.org",
             port: 1883,
-            clientID: "swiftItalus", // must be unique to the client
+            clientID: "swiftItalusTeste", // must be unique to the client
             cleanSession: true,
             keepAlive: 15,
             useSSL: false
         )
-        self.mqttSession!.connect { (result, error) in
-            if result == false {
-                self.statusLabel.text = "Desconectado"
-                self.statusLabel.textColor = .red
-            } else {
-                self.statusLabel.text = "Conectado"
-                self.statusLabel.textColor = .black
+        
+        LoadingAnimation.run()
+        DispatchQueue.main.async {
+            self.mqttSession!.connect { (result, error) in
+                if result == false {
+                    self.statusLabel.text = "Desconectado"
+                    self.statusLabel.textColor = .red
+                    self.reconnectBtn.isHidden = false
+                } else {
+                    self.statusLabel.text = "Conectado"
+                    self.statusLabel.textColor = .black
+                    self.reconnectBtn.isHidden = true
+                }
+                LoadingAnimation.stop()
             }
         }
+        
+    }
+    
+    func someAsyncFunction(completion: @escaping (Error?) -> Void) {
+        // Something that takes some time to complete.
+        completion(nil) // Or completion(SomeError.veryBadError)
     }
     
     func sendMqttMessage(string: String){
@@ -109,23 +173,62 @@ extension ViewController: CLLocationManagerDelegate{
         if status == .authorizedAlways || status == .authorizedWhenInUse{
             manager.startUpdatingLocation()
             self.mapView.showsUserLocation = true
+            if let location = locationManager.location{
+//                let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
+//                self.mapView.setRegion(region, animated: true)
+                self.mapView.userTrackingMode = MKUserTrackingMode.follow
+            }
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first{
-            let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
-            self.mapView.setRegion(region, animated: true)
+        self.mapView.userTrackingMode = MKUserTrackingMode.follow
+        guard let location = locationManager.location else {return}
+        //let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
+        //self.mapView.setRegion(region, animated: true)
+        guard let center = centerLocation else {return}
+        guard let inside = self.inside else {return}
+        
+        
+        if location.distance(from: center) < self.distance && !inside{
+            Alert.show(title: "Entrando", msg: "")
+            self.inside = true
+            automaticMessage(entering: true)
+        } else if location.distance(from: center) > self.distance && inside {
+            Alert.show(title: "Saindo", msg: "")
+            self.inside = false
+            automaticMessage(entering: false)
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        print("Saiu")
-    }
- 
-    
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("Entrou")
+    func automaticMessage(entering: Bool){
+        if entering{
+            if ledSwitch.isOn{
+                sendMqttMessage(string: "Ativar LED")
+            } else {
+                sendMqttMessage(string: "Desativar LED")
+            }
+            if tvSwitch.isOn{
+                sendMqttMessage(string: "Ativar TV")
+            } else {
+                sendMqttMessage(string: "Desativar TV")
+            }
+            if arSwitch.isOn{
+                sendMqttMessage(string: "Ativar Ar")
+            } else {
+                sendMqttMessage(string: "Desativar Ar")
+            }
+            if lampSwitch.isOn{
+                sendMqttMessage(string: "Ativar Lampada")
+            } else {
+                sendMqttMessage(string: "Desativar Lampada")
+            }
+        } else {
+            sendMqttMessage(string: "Desativar LED")
+            sendMqttMessage(string: "Desativar TV")
+            sendMqttMessage(string: "Desativar Ar")
+            sendMqttMessage(string: "Desativar Lampada")
+        }
     }
 }
 
