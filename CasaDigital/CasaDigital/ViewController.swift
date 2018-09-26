@@ -21,7 +21,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
     var centerLocation: CLLocation?
     var locationManager = CLLocationManager()
     var distance: Double = 500
+    var distanceMarked: Double?
     var centered = false
+    var authorized = false
     var inside: Bool?
     
     override func viewDidLoad() {
@@ -40,7 +42,9 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func setLocation(_ sender: Any) {
         if let location = locationManager.location{
+            mapView.removeOverlays(mapView.overlays)
             self.centerLocation = location
+            self.distanceMarked = self.distance
             let circle = MKCircle(center: location.coordinate, radius: CLLocationDistance(self.distance))
             self.inside = true
             mapView.add(circle)
@@ -48,14 +52,16 @@ class ViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func activateLocalization(_ sender: Any) {
-        if locationManager.location != nil{
-            self.geoStopBtn.titleLabel?.text = "Ativar Localização"
+        if !authorized{
+            self.geoStopBtn.setTitle("Ativar Localização", for: UIControlState.normal)
             self.geoStopBtn.backgroundColor = .blue
             locationManager.stopUpdatingLocation()
+            authorized = true
         } else {
-            self.geoStopBtn.titleLabel?.text = "Parar Localização"
+            self.geoStopBtn.setTitle("Parar Localização", for: UIControlState.normal)
             self.geoStopBtn.backgroundColor = .red
             locationManager.startUpdatingLocation()
+            authorized = false
         }
     }
     
@@ -89,7 +95,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
     @IBAction func changeDistance(_ sender: UISlider) {
         self.distance = Double(sender.value*1000)
-        self.distanceLabel.text = "Distância: \(self.distance)"
+        self.distanceLabel.text = "Distância: \(Int(self.distance))m"
     }
     
     @IBAction func activateDispositive(_ sender: UISwitch) {
@@ -172,6 +178,7 @@ extension ViewController: CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedAlways || status == .authorizedWhenInUse{
             manager.startUpdatingLocation()
+            self.authorized = true
             self.mapView.showsUserLocation = true
             if let location = locationManager.location{
 //                let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 200, 200)
@@ -188,13 +195,13 @@ extension ViewController: CLLocationManagerDelegate{
         //self.mapView.setRegion(region, animated: true)
         guard let center = centerLocation else {return}
         guard let inside = self.inside else {return}
+        guard let distance = self.distanceMarked else {return}
         
-        
-        if location.distance(from: center) < self.distance && !inside{
+        if location.distance(from: center) < distance && !inside{
             Alert.show(title: "Entrando", msg: "")
             self.inside = true
             automaticMessage(entering: true)
-        } else if location.distance(from: center) > self.distance && inside {
+        } else if location.distance(from: center) > distance && inside {
             Alert.show(title: "Saindo", msg: "")
             self.inside = false
             automaticMessage(entering: false)

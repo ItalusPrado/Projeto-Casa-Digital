@@ -24,19 +24,19 @@
                                     <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="NZ7-qK-BhH"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-kY-WdK">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DXr-kY-WdK">
                                 <rect key="frame" x="20" y="155" width="51" height="31"/>
                                 <connections>
                                     <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="Kpa-15-qPW"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jAK-vH-PWp">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jAK-vH-PWp">
                                 <rect key="frame" x="20" y="257" width="51" height="31"/>
                                 <connections>
                                     <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Lp-Kj-NRH"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fl7-2P-MjW">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fl7-2P-MjW">
                                 <rect key="frame" x="20" y="206" width="51" height="31"/>
                                 <connections>
                                     <action selector="activateDispositive:" destination="BYZ-38-t0r" eventType="valueChanged" id="5C7-Bg-NF7"/>
@@ -66,8 +66,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Brilho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-Na-nnH">
-                                <rect key="frame" x="89" y="260" width="105" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alto Brilho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ux-Na-nnH">
+                                <rect key="frame" x="89" y="260" width="98" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distância (Metros):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEv-6i-AC2">
-                                <rect key="frame" x="16" y="495" width="146" height="21"/>
+                                <rect key="frame" x="16" y="490" width="146" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="fBK-iM-qfS"/>
                                 </constraints>
@@ -95,7 +95,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ed2-oq-icX">
-                                <rect key="frame" x="168" y="490.5" width="138" height="31"/>
+                                <rect key="frame" x="168" y="485.5" width="138" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="134" id="7xu-ky-ibY"/>
                                 </constraints>
@@ -130,14 +130,14 @@
                             <constraint firstItem="fl7-2P-MjW" firstAttribute="top" secondItem="DXr-kY-WdK" secondAttribute="bottom" constant="20" id="9Gz-MB-DPJ"/>
                             <constraint firstItem="mTE-8j-eTD" firstAttribute="top" secondItem="WSI-51-XCu" secondAttribute="bottom" constant="4" id="BQe-pD-t1y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OCF-b2-J8z" secondAttribute="trailing" constant="16" id="HZD-Ol-vZK"/>
-                            <constraint firstItem="VEv-6i-AC2" firstAttribute="top" secondItem="OCF-b2-J8z" secondAttribute="bottom" constant="16" id="I8M-kP-HL2"/>
+                            <constraint firstItem="VEv-6i-AC2" firstAttribute="top" secondItem="OCF-b2-J8z" secondAttribute="bottom" constant="11" id="I8M-kP-HL2"/>
                             <constraint firstItem="jAK-vH-PWp" firstAttribute="top" secondItem="fl7-2P-MjW" secondAttribute="bottom" constant="20" id="JNt-Vh-EoO"/>
                             <constraint firstItem="DXr-kY-WdK" firstAttribute="centerX" secondItem="8ge-KJ-1o8" secondAttribute="centerX" id="N1K-pW-gFr"/>
                             <constraint firstItem="DXr-kY-WdK" firstAttribute="top" secondItem="8ge-KJ-1o8" secondAttribute="bottom" constant="20" id="R9A-rC-VRC"/>
                             <constraint firstItem="Ssh-Qu-DRI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RFe-4S-O75"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ssh-Qu-DRI" secondAttribute="bottom" constant="16" id="Tw5-bk-m5f"/>
                             <constraint firstItem="WSI-51-XCu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UM2-dN-188"/>
-                            <constraint firstItem="Ssh-Qu-DRI" firstAttribute="top" secondItem="VEv-6i-AC2" secondAttribute="bottom" constant="6" id="XyN-EW-Yio"/>
+                            <constraint firstItem="Ssh-Qu-DRI" firstAttribute="top" secondItem="VEv-6i-AC2" secondAttribute="bottom" constant="11" id="XyN-EW-Yio"/>
                             <constraint firstItem="2Ux-Na-nnH" firstAttribute="leading" secondItem="jAK-vH-PWp" secondAttribute="trailing" constant="20" id="ZyD-Gf-FfE"/>
                             <constraint firstItem="8ge-KJ-1o8" firstAttribute="top" secondItem="WSI-51-XCu" secondAttribute="bottom" constant="40" id="a1J-fh-PCr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ed2-oq-icX" secondAttribute="trailing" constant="16" id="aKf-Tm-xKo"/>

@@ -30,8 +30,8 @@
 
 
 // WIFI
-const char* SSID = "Yvens"; // SSID / nome da rede WI-FI que deseja se conectar
-const char* PASSWORD = "asd123456"; // Senha da rede WI-FI que deseja se conectar
+const char* SSID = "LAESE"; // SSID / nome da rede WI-FI que deseja se conectar
+const char* PASSWORD = "laesewifi"; // Senha da rede WI-FI que deseja se conectar
  
 // MQTT
 const char* BROKER_MQTT = "ifce.sanusb.org"; //URL do broker MQTT que se deseja utilizar
@@ -110,6 +110,26 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length)
        char c = (char)payload[i];
        msg += c;
     }
+
+    if (msg.equals("Ativar LED")){
+      
+    } else if (msg.equals("Ativar TV")){
+      digitalWrite(D0, HIGH);
+    } else if (msg.equals("Ativar Ar")){
+      digitalWrite(D1, HIGH);
+    } else if (msg.equals("Ativar Lampada")){
+      digitalWrite(D2, HIGH);
+    }
+
+    if (msg.equals("Desativar LED")){
+      
+    } else if (msg.equals("Desativar TV")){
+      digitalWrite(D0, LOW);
+    } else if (msg.equals("Desativar Ar")){
+      digitalWrite(D1, LOW);
+    } else if (msg.equals("Desativar Lampada")){
+      digitalWrite(D2, LOW);
+    }
   
     //toma ação dependendo da string recebida:
     //verifica se deve colocar nivel alto de tensão na saída D0:
@@ -129,18 +149,18 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length)
 //      case "Desativar Ar":
 //      case "Desativar Lampada":
 //    }
-    if (msg.equals("Ligar"))
-    {
-        digitalWrite(D0, LOW);
-        EstadoSaida = '1';
-    }
-
-    //verifica se deve colocar nivel alto de tensão na saída D0:
-    if (msg.equals("Desligar"))
-    {
-        digitalWrite(D0, HIGH);
-        EstadoSaida = '0';
-    }
+//    if (msg.equals("Ligar"))
+//    {
+//        digitalWrite(D0, LOW);
+//        EstadoSaida = '1';
+//    }
+//
+//    //verifica se deve colocar nivel alto de tensão na saída D0:
+//    if (msg.equals("Desligar"))
+//    {
+//        digitalWrite(D0, HIGH);
+//        EstadoSaida = '0';
+//    }
     
 }
  
@@ -234,7 +254,7 @@ void InitOutput(void)
     pinMode(D2, OUTPUT);
     pinMode(D1, OUTPUT);
     pinMode(D4, OUTPUT);
-    //pinMode(D0, OUTPUT);
+    pinMode(D0, OUTPUT);
     //digitalWrite(D0, HIGH);          
 }
 
