@@ -1,15 +1,15 @@
-#include <ESP8266WiFi.h> // Importa a Biblioteca ESP8266WiFi
+#include "ESP8266WiFi.h" // Importa a Biblioteca ESP8266WiFi
 #include <PubSubClient.h> // Importa a Biblioteca PubSubClient
 //******** Vídeo: https://youtu.be/i7770MC9ID0 ************
 //defines:
 //defines de id mqtt e tópicos para publicação e subscribe
-#define TOPICO_SUBSCRIBE "/command"     //tópico MQTT de escuta
-#define TOPICO_PUBLISH   "/feedback"    //tópico MQTT de envio de informações para Broker
+#define TOPICO_SUBSCRIBE "/italus"     //tópico MQTT de escuta
+#define TOPICO_PUBLISH   "/italusteste"    //tópico MQTT de envio de informações para Broker
                                                    //IMPORTANTE: recomendamos fortemente alterar os nomes
                                                    //            desses tópicos. Caso contrário, há grandes
                                                    //            chances de você controlar e monitorar o NodeMCU
                                                    //            de outra pessoa.
-#define ID_MQTT  "HomeAut"     //id mqtt (para identificação de sessão)
+#define ID_MQTT  "ItalusHome"     //id mqtt (para identificação de sessão)
                                //IMPORTANTE: este deve ser único no broker (ou seja, 
                                //            se um client MQTT tentar entrar com o mesmo 
                                //            id de outro já conectado ao broker, o broker 
@@ -30,8 +30,8 @@
 
 
 // WIFI
-const char* SSID = "LAESE"; // SSID / nome da rede WI-FI que deseja se conectar
-const char* PASSWORD = "laesewifi"; // Senha da rede WI-FI que deseja se conectar
+const char* SSID = "ITALUS"; // SSID / nome da rede WI-FI que deseja se conectar
+const char* PASSWORD = "1029384756"; // Senha da rede WI-FI que deseja se conectar
  
 // MQTT
 const char* BROKER_MQTT = "ifce.sanusb.org"; //URL do broker MQTT que se deseja utilizar
@@ -103,55 +103,57 @@ void initMQTT()
 void mqtt_callback(char* topic, byte* payload, unsigned int length) 
 {
     String msg;
-
     //obtem a string do payload recebido
     for(int i = 0; i < length; i++) 
     {
        char c = (char)payload[i];
        msg += c;
     }
-
-    if (msg.equals("Ativar LED")){
-      
-    } else if (msg.equals("Ativar TV")){
+   Serial.println(msg);
+   if (msg.equals("Ativar LED")){
+      Serial.println("Ativando Led");
+      digitalWrite(2, LOW);
+      //pinMode(2, LOW);
+   } else if (msg.equals("Ativar TV")){
+      Serial.println("Ativando TV");
       digitalWrite(D0, HIGH);
-    } else if (msg.equals("Ativar Ar")){
+      pinMode(D0, HIGH);
+   } else if (msg.equals("Ativar Ar")){
+      Serial.println("Ativando Ar");
       digitalWrite(D1, HIGH);
-    } else if (msg.equals("Ativar Lampada")){
+      pinMode(D1, HIGH);
+   } else if (msg.equals("Ativar Lampada")){
+      Serial.println("Ativando Lampada");
       digitalWrite(D2, HIGH);
-    }
+      pinMode(D2, HIGH);
+   }
 
-    if (msg.equals("Desativar LED")){
-      
-    } else if (msg.equals("Desativar TV")){
+   if (msg.equals("Desativar LED")){
+      Serial.println("Desativando Led");
+      digitalWrite(2, HIGH);
+      //pinMode(2, HIGH);
+   } else if (msg.equals("Desativar TV")){
+      Serial.println("Desativando TV");
       digitalWrite(D0, LOW);
-    } else if (msg.equals("Desativar Ar")){
+      pinMode(D0, LOW);
+   } else if (msg.equals("Desativar Ar")){
+      Serial.println("Desativando Ar");
       digitalWrite(D1, LOW);
-    } else if (msg.equals("Desativar Lampada")){
+      pinMode(D1, LOW);
+   } else if (msg.equals("Desativar Lampada")){
+      Serial.println("Desativando Lampada");
       digitalWrite(D2, LOW);
-    }
-  
+      pinMode(D2, LOW);
+   }
     //toma ação dependendo da string recebida:
     //verifica se deve colocar nivel alto de tensão na saída D0:
     //IMPORTANTE: o Led já contido na placa é acionado com lógica invertida (ou seja,
     //enviar HIGH para o output faz o Led apagar / enviar LOW faz o Led acender)
-//    switch(msg){
-//      case "Ativar Led":
-//        digitalWrite(D4,HIGH);
-//      case "Ativar TV":
-//        digitalWrite(D2,HIGH);
-//      case "Ativar Ar":
-//      case "Ativar Lampada":
-//      case "Desativar Led":
-//        digitalWrite(D4,LOW);
-//      case "Desativar TV":
-//        digitalWrite(D2,HIGH);
-//      case "Desativar Ar":
-//      case "Desativar Lampada":
-//    }
 //    if (msg.equals("Ligar"))
 //    {
+//        
 //        digitalWrite(D0, LOW);
+//        pinMode(2, HIGH);
 //        EstadoSaida = '1';
 //    }
 //
@@ -159,9 +161,10 @@ void mqtt_callback(char* topic, byte* payload, unsigned int length)
 //    if (msg.equals("Desligar"))
 //    {
 //        digitalWrite(D0, HIGH);
+//        pinMode(2, LOW);
 //        EstadoSaida = '0';
 //    }
-    
+//    
 }
  
 //Função: reconecta-se ao broker MQTT (caso ainda não esteja conectado ou em caso de a conexão cair)
@@ -251,11 +254,11 @@ void InitOutput(void)
 {
     //IMPORTANTE: o Led já contido na placa é acionado com lógica invertida (ou seja,
     //enviar HIGH para o output faz o Led apagar / enviar LOW faz o Led acender)
-    pinMode(D2, OUTPUT);
-    pinMode(D1, OUTPUT);
-    pinMode(D4, OUTPUT);
     pinMode(D0, OUTPUT);
-    //digitalWrite(D0, HIGH);          
+    pinMode(D1, OUTPUT);
+    pinMode(D2, OUTPUT);
+    pinMode(2, OUTPUT);
+    //digitalWrite(2, HIGH);          
 }
 
 //programa principal
